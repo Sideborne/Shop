@@ -398,15 +398,16 @@ a
 .ml
     margin-left: 18px
 
+.column
+    flex-direction: column
+
 .perfect
     padding-left: 200px
+
 .catalog-top
     background: #F8F3F4
     text-transform: uppercase
     min-height: 148px
-    display: flex
-    align-items: center
-    justify-content: space-between
     &__article
         font-size: 24px
         line-height: 29px
@@ -424,6 +425,12 @@ a
         position: relative
         min-height: 148px
 
+.position
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0px 175px
+
 .filter
     padding-top: 50px
     padding-bottom: 64px
@@ -431,6 +438,7 @@ a
     line-height: 17px
     display: flex
     justify-content: space-between
+    text-transform: uppercase
     &__main
         width: 100% / 3
         &__menu
