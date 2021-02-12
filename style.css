@@ -278,6 +278,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-transform: uppercase;
 }
 
 .sale__heading {
@@ -434,6 +435,7 @@ a {
   margin-left: 18px;
   font-size: 13px;
   line-height: 16px;
+  text-transform: uppercase;
 }
 
 .card__p {
@@ -1462,6 +1464,7 @@ a {
   }
   .sale_top {
     padding-bottom: 20px;
+    text-transform: uppercase;
   }
   .sale_item:not(:last-child) {
     margin-right: 20px;
