@@ -124,15 +124,14 @@ a
 .promo
     min-height: 368px
     display: flex
+    background: #F1E4E6
     &__img
         width: 50%
         position: relative
     &__photo
         width: 100%
-        background: rgba(113, 103, 105, 0.08)
     &__text
         width: 50%
-        background: #F1E4E6
         padding-left: 64px
         display: flex
     &__content
@@ -149,10 +148,7 @@ a
         font-weight: bold
         font-size: 32px
         line-height: 38px
-        color: $colorBackground
-        transition: transform 2s
-        transform-origin: left top
-        animation: text-rotate 5s        
+        color: $colorBackground      
 
 .sale
     padding-top: 64px
@@ -178,6 +174,7 @@ a
         flex-direction: column
         align-items: center
         justify-content: center
+        text-transform: uppercase
     &__heading
         font-weight: bold
         font-size: 24px
@@ -223,7 +220,7 @@ a
 
 .card
     width: 360px
-    margin: 15px 15px
+    margin: 15px 10px
     background: $backGroundCard
     padding-bottom: 20px
     &__img
@@ -265,6 +262,7 @@ a
         margin-left: 18px
         font-size: 13px
         line-height: 16px
+        text-transform: uppercase
     &__p
         margin-top: 12px
         margin-left: 16px
@@ -402,7 +400,10 @@ a
     flex-direction: column
 
 .perfect
-    padding-left: 200px
+    padding: 50px 0 0 200px
+
+.catalog__position
+    padding-top: 50px
 
 .catalog-top
     background: #F8F3F4
@@ -653,8 +654,8 @@ a
     padding-top: 96px
     padding-bottom: 128px
     display: flex
-    justify-content: center
-    flex-wrap: wrap
+    justify-content: space-around
+    margin: 0 16px
     &_products
         display: flex
         flex-direction: column
@@ -679,6 +680,7 @@ a
             margin-bottom: 42px
             font-size: 24px
             line-height: 29px
+            text-transform: uppercase
             &:hover
                 color: $colorSelect
         &__p
@@ -695,6 +697,8 @@ a
             font-size: 22px
             line-height: 26px
             color: #575757
+        &__application
+            max-width: 360px
     &__img
         height: 100%
     &__delete
@@ -707,7 +711,6 @@ a
         display: flex
         justify-content: space-between
     &__accept
-        padding-left: 128px
         display: flex
         flex-direction: column
         justify-content: flex-start
@@ -780,7 +783,7 @@ a
 .ml-summary
     margin-left: 26px
 .submit
-    color: white
+    color: #FFFFFF
     font-size: 16px
     line-height: 19px
     background: $colorSelect
@@ -865,42 +868,68 @@ a
                 margin-right: 22px
                 content: url("img/check.svg")
 
-.shift
-    left: 80%
-    animation-delay: 0.5s
+.proof
+    padding-left: 50px
+
+.cart-box
+    &__application
+        display: flex
+        flex-direction: column
+
+.cart-box
+    &__summary
+        &__p
+            text-transform: uppercase
+        &__h
+            text-transform: uppercase
+
 
 @media(max-width: 768px)
     .container
         max-width: 768px
-    .ball
-        width: 60px
-        height: 60px
 
     .header
         padding-left: 32px
-        padding-right: 32px
+        padding-right: 41px
+        &__menu__button
+            margin-right: 25px
 
-    .promo_heading
+    .promo__heading
+        font-weight: 900
         font-size: 44px
-        line-height: 52px
+        line-height: 58px
+        color: #222222
 
-    .promo_text
+    .promo__text
         padding-left: 40px
 
-    .promo_info
+    .promo__info
+        font-weight: 700
         font-size: 24px
         line-height: 28px
 
     .sale
-        padding-top: 20px
-        padding-left: 16px
-        padding-right: 16px
+        padding: 20px 0 155px
 
-        &_top
-            padding-bottom: 20px
+        &__top
+            padding-bottom: 19px
+            text-transform: uppercase
 
-        &_item:not(:last-child)
+        &__item:not(:last-child)
             margin-right: 20px
+
+    .product-section
+        padding: 0
+
+        &__header
+            padding-bottom: 64px
+
+        &__cards
+            padding: 0
+            margin-bottom: 33px
+
+        &__button
+            margin-bottom: 65px
 
     .card
         margin: 8px 8px
@@ -911,22 +940,32 @@ a
     .bottom_item
         margin-top: 48px
 
-    .content_bottom
+    .advantages__position
         min-height: 610px
         flex-direction: column
+        justify-content: space-around
 
-    .footer_top
-        height: 692px
+    .footer__top
         flex-direction: column
         justify-content: flex-start
         background-position: calc(25%)
+        &__left
+            padding-top: 53px
+        &__right
+            padding-top: 60px
 
-        &_left
-        padding-top: 64px
-        &_right
-        padding-top: 60px
+    .footer__top__right
+        &__p
+            text-transform: uppercase
+        &__h
+            text-transform: uppercase
 
-    .footer_bottom
+    .footer__position
+        flex-direction: column
+        min-height: 693px
+        justify-content: flex-start
+
+    .footer__bottom
         padding-left: 32px
         padding-right: 32px
 
@@ -975,52 +1014,130 @@ a
     .card_cart
         max-width: 734px
 
-@media(max-width: 375px)
-    .container
-        max-width: 375px
+    .position
+        padding: 0 16px
+        justify-content: space-between
 
-    .ball
-        width: 40px
-        height: 40px
+    .filter
+        padding: 50px 16px 64px
+        &__right
+            width: 45%
+
+    .catalog-top
+        &____position
+            padding: 0 16px
+
+    .proof
+        padding-top: 50px
+
+    .product__info
+        padding: 64px
+
+    .perfect
+        padding: 50px 16px
+
+    .catalog__position
+        padding: 0
+
+    .cart-box
+        padding-top: 59px
+        margin: auto 16px
+        justify-content: space-between
+        flex-direction: column
+        &__products
+            margin-bottom: 64px
+        &__accept
+            padding: 0
+            display: flex
+            flex-direction: initial
+        &__summary
+            margin-top: 38px
+            margin-left: 15px
+        &__cart
+            max-width: 734px
+        &__application
+            max-width: 360px
+
+        
+
+    .cart-box__buttons
+        justify-content: space-around
+
+    .registration
+        display: flex
+        flex-wrap: nowrap
+        padding-top: 40px
+        &__data
+            margin: 0 22px 0 16px
+        &__info
+            margin: 0
+            font-weight: 300
+            font-size: 16px
+            line-height: 19px
+        &__p
+            text-transform: uppercase
+            margin: 0
+        &__gender__box
+            padding-bottom: 44px
+        &__list__item:last-child
+            margin-top: 26px
+            
+    
+
+
+@media(max-width: 480px)
+    .container
+        max-width: 480px
+        margin: 0 auto
 
     .header
         padding-left: 16px
         padding-right: 16px
+        &__menu__button
+            margin-right: 0
+
+    .mobile_none
+        display: none
 
     .top_menu_button
         margin-right: 0
 
-    .promo_img
-        display: none
+    .promo
+        padding: 0 56px
+        margin-bottom: 64px
+        &__img
+            display: none
 
-    .promo_heading
-        font-size: 38px
-        line-height: 46px
+        &__heading
+            font-size: 38px
+            line-height: 46px
 
-    .promo_info
-        font-size: 20px
-        line-height: 24px
+        &__info
+            font-size: 20px
+            line-height: 24px
 
-    .promo_text
-        width: 100%
-        padding-left: 56px
+        &__text
+            width: 100%
 
     .sale
-        padding-top: 64px
+        padding: 0
+        margin-bottom: 64px
+        &__top
+            flex-direction: column
+            padding-bottom: 0
 
-    &_top
-        flex-direction: column
-        padding-bottom: 0
+        &__item:not(:last-child)
+            margin-right: 16px
 
-    &_item:not(:last-child)
-        margin-right: 0
+        &__item
+            margin-bottom: 32px
 
-    &_item
-        margin-bottom: 30px
+        &__item_bottom
+            background: url("img/item-big.png") no-repeat center
+            background-size: auto 100%
 
-    &_item_bottom
-        background: url("img/item-big.png") no-repeat center
-        background-size: auto 100%
+    .card
+        width: 100%
 
     .mobile
         display: none
@@ -1029,13 +1146,13 @@ a
         padding-top: 0
         padding-bottom: 64px
 
-    &_top
+    &__top
         padding-bottom: 16px
 
-    .footer_top
+    .footer__top
         height: 550px
 
-    &_left
+    &__left
         padding-top: 64px
 
     .footer_p_left
@@ -1054,14 +1171,15 @@ a
     .button_email
         margin-left: -80px
 
-    .footer_bottom
-        height: 144px
-        flex-direction: column-reverse
-        &_left
-        margin-top: 40px
-        margin-bottom: 9px
-        &_right
-        margin-top: 42px
+    .footer
+        &__position-bottom
+            height: 144px
+            flex-direction: column-reverse
+        &__bottom
+            &__left
+                margin-bottom: 9px
+            &__right
+                padding: 43px 0 40px 0
 
     .catalog_nav
         flex-direction: column
@@ -1077,6 +1195,18 @@ a
         margin-right: 8px
         font-size: 12px
         line-height: 14px
+
+    .catalog-top
+        &__position
+            padding: 0 16px
+            flex-direction: column
+            justify-content: space-around
+
+    .product__img
+        width: 100%
+
+    .product__info
+        padding: 64px 25px
 
     .filter_visible+img
         margin-left: 0
@@ -1120,3 +1250,55 @@ a
 
     .shift_mobile
         padding-top: 64px
+
+    .registration
+        flex-direction: column
+        &__data
+            margin: 0 8px
+        &__input
+            width: 100%
+        &__submit
+            margin-bottom: 40px
+        &__info
+            margin: 0 9px
+
+    .proof
+        text-align: center
+
+    .cart-box
+        margin: 0 9px
+        padding-bottom: 96px
+        &__img
+            max-height: 188px
+        &__cart__info
+            max-height: 188px
+        &__accept
+            flex-direction: column
+            &__input
+                width: 100%
+        &__button
+            margin: 0 4px
+        &__summary
+            margin: 48px 9px 0 0
+            width: 480px
+            max-width: 100%
+        &__application
+            max-width: 480px
+            max-width: 100%
+        &__cart
+            margin-bottom: 32px
+            height: 100%
+            &__quantity
+                font-size: 10px
+                line-height: 12px
+            &__h
+                font-weight: normal
+                font-size: 16px
+                line-height: 19px
+                margin-bottom: 25px
+            &__p
+                font-weight: normal
+                font-size: 14px
+                line-height: 17px
+
+        
