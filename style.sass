@@ -124,15 +124,14 @@ a
 .promo
     min-height: 368px
     display: flex
+    background: #F1E4E6
     &__img
         width: 50%
         position: relative
     &__photo
         width: 100%
-        background: rgba(113, 103, 105, 0.08)
     &__text
         width: 50%
-        background: #F1E4E6
         padding-left: 64px
         display: flex
     &__content
@@ -149,10 +148,7 @@ a
         font-weight: bold
         font-size: 32px
         line-height: 38px
-        color: $colorBackground
-        transition: transform 2s
-        transform-origin: left top
-        animation: text-rotate 5s        
+        color: $colorBackground      
 
 .sale
     padding-top: 64px
@@ -867,43 +863,52 @@ a
                 margin-right: 22px
                 content: url("img/check.svg")
 
-.shift
-    left: 80%
-    animation-delay: 0.5s
-
 @media(max-width: 768px)
     .container
         max-width: 768px
-    .ball
-        width: 60px
-        height: 60px
 
     .header
         padding-left: 32px
-        padding-right: 32px
+        padding-right: 41px
+        &__menu__button
+            margin-right: 25px
 
-    .promo_heading
+    .promo__heading
+        font-weight: 900
         font-size: 44px
-        line-height: 52px
+        line-height: 58px
+        color: #222222
 
-    .promo_text
+    .promo__text
         padding-left: 40px
 
-    .promo_info
+    .promo__info
+        font-weight: 700
         font-size: 24px
         line-height: 28px
 
     .sale
-        padding-top: 20px
-        padding-left: 16px
-        padding-right: 16px
+        padding: 20px 0 155px
 
-        &_top
-            padding-bottom: 20px
+        &__top
+            padding-bottom: 19px
             text-transform: uppercase
 
-        &_item:not(:last-child)
+        &__item:not(:last-child)
             margin-right: 20px
+
+    .product-section
+        padding: 0
+
+        &__header
+            padding-bottom: 64px
+
+        &__cards
+            padding: 0
+            margin-bottom: 33px
+
+        &__button
+            margin-bottom: 65px
 
     .card
         margin: 8px 8px
@@ -914,22 +919,32 @@ a
     .bottom_item
         margin-top: 48px
 
-    .content_bottom
+    .advantages__position
         min-height: 610px
         flex-direction: column
+        justify-content: space-around
 
-    .footer_top
-        height: 692px
+    .footer__top
         flex-direction: column
         justify-content: flex-start
         background-position: calc(25%)
+        &__left
+            padding-top: 53px
+        &__right
+            padding-top: 60px
 
-        &_left
-        padding-top: 64px
-        &_right
-        padding-top: 60px
+    .footer__top__right
+        &__p
+            text-transform: uppercase
+        &__h
+            text-transform: uppercase
 
-    .footer_bottom
+    .footer__position
+        flex-direction: column
+        min-height: 693px
+        justify-content: flex-start
+
+    .footer__bottom
         padding-left: 32px
         padding-right: 32px
 
@@ -978,15 +993,11 @@ a
     .card_cart
         max-width: 734px
 
-@media(max-width: 375px)
+@media(max-width: 480px) 
     .container
         max-width: 375px
 
-    .ball
-        width: 40px
-        height: 40px
-
-    .header
+    .header__position
         padding-left: 16px
         padding-right: 16px
 
